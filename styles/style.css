@@ -13,4 +13,92 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+
+  max-inline-size: 700px;
+  background-color: gray;
+  color: var(--color-main);
+}
+
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-block-size: var(--header-height);
+  background-color: #fff;
+  font-family: var(--font-title);
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-bottom: var(--header-bottom);
+  border: 2px solid currentColor;
+}
+
+.logo-group {
+
+}
+
+.logo {
+/*  vertical-align: bottom;*/
+  font-size: var(--font-size-logo);
+/*  line-height: 100%;*/
+}
+
+.sublogo {
+  /*font: 400 var(--font-size-sublogo) / 1 'Press Start 2P';*/
+  font-size: var(--font-size-sublogo);
+}
+
+.stages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+  
+.article {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+}
+
+.article-title {
+  font: 715 18px / 30px var(--font-main); /* line-height: 100% in figma; */
+/* vertical-align: middle; */
+}
+
+.article img {
+  inline-size: 100%;
+  block-size: 100%;
+  border-block-start: 2px solid currentColor;
+  border-block-en: 2px solid currentColor;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  font: 410 18px / 21px var(--font-main);
+  padding: var(--article-gap);
+  gap: var(--article-gap);
+}
+
+.article-text {
+/*  font: 410 18px / 21px var(--font-main);*/
+}
+
+.like {
+  /* like=130x38 total=169x38 */
+  align-self: flex-end;
+  min-inline-size: 130px; /* ? */
+  font: 400 14px / 2.429 'Press Start 2P'; /* line-height: 90% in figma; */
+  border: 2px solid currentColor;
+}
+
+.like::before {
+
+}
+
+.footer {
+
 }
