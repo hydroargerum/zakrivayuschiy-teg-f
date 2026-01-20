@@ -42,7 +42,6 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-/*  font: 400 var(--font-size-logo) / 100% var(--font-title);*/
   font-family: var(--font-title);
   text-transform: uppercase;
 }
@@ -95,8 +94,6 @@
   background-color: transparent;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: 1px 1px #fff;
-
   text-shadow: -1px 0 var(--color-shadow), 0 1px var(--color-shadow), 1px 0 var(--color-shadow), 0 -1px var(--color-shadow);
 }
 
@@ -117,9 +114,10 @@
   border-block-start: 2px solid currentColor;
 }
 
+/*
 .article-text {
-/*  font: 410 18px / 21px var(--font-main);*/
-}
+  font: 410 18px / 21px var(--font-main);
+}*/
 
 .like {
   /* like=130x38 total=169x38 */
@@ -129,6 +127,7 @@
   border: 2px solid currentColor;
 }
 
+/*
 .like::before {
 
 }
@@ -136,3 +135,4 @@
 .footer {
 
 }
+*/

@@ -29,7 +29,7 @@ Black Italic <span class="inter-regular-black-italic"> Black Italic </span> */
     local('Inter-Variable'),
     url('./Inter-Variable.woff2') format('woff2 supports variations'),
         url('./Inter-Variable.woff2') format('woff2-variations');
-    font-weight: 100 900;
+    font-weight: 400 785; /* 100 900 */
 }
 /*
 @font-face {
