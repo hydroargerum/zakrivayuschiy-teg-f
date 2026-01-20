@@ -15,40 +15,46 @@
   min-block-size: 100dvb;
 
   max-inline-size: 700px;
-  background-color: gray;
+  background-color: gray; /* for test */
   color: var(--color-main);
 }
 
+.page * {
+  background-color: var(--color-background);
+}
+
 .header {
+  max-inline-size: var(--header-inline-size);
+  min-block-size: var(--header-block-size);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-background);
+  margin: var(--header-top) auto var(--header-bottom);
+  outline: 2px solid currentColor;
+}
+
+.logo-group {
   display: flex;
   flex-flow: column wrap;
   gap: 20px;
   justify-content: center;
   align-items: center;
-  min-block-size: var(--header-height);
-  background-color: #fff;
+/*  font: 400 var(--font-size-logo) / 100% var(--font-title);*/
   font-family: var(--font-title);
-  font-weight: 400;
-  line-height: 100%;
   text-transform: uppercase;
-  margin-top: 100px;
-  margin-bottom: var(--header-bottom);
-  border: 2px solid currentColor;
-}
-
-.logo-group {
-
 }
 
 .logo {
-/*  vertical-align: bottom;*/
   font-size: var(--font-size-logo);
-/*  line-height: 100%;*/
+  line-height: 100%;
 }
 
 .sublogo {
-  /*font: 400 var(--font-size-sublogo) / 1 'Press Start 2P';*/
   font-size: var(--font-size-sublogo);
+  line-height: 100%;
 }
 
 .stages {
@@ -60,20 +66,47 @@
 .article {
   display: flex;
   flex-direction: column;
-  border: 2px solid #000;
+  border: 2px solid currentColor;
 }
 
 .article-title {
-  font: 715 18px / 30px var(--font-main); /* line-height: 100% in figma; */
-/* vertical-align: middle; */
+  font: 715 18px / 22px var(--font-main); /* line-height: 100% in figma; */
+  padding: 5px 10px 3px;
+  border-block-end: 2px solid currentColor;
 }
 
-.article img {
-  inline-size: 100%;
-  block-size: 100%;
-  border-block-start: 2px solid currentColor;
-  border-block-en: 2px solid currentColor;
+.illustration {
+/*  height: 100vw;*/
+  display: flex;
+  position: relative;
 }
+
+.illustration img {
+  inline-size: 100%;
+  aspect-ratio: 1 / 1; /* 1:1 */
+  object-fit: cover;
+}
+
+.label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font: 400 14px / 100% var(--font-title);
+  background-color: transparent;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 1px #fff;
+
+  text-shadow: -1px 0 var(--color-shadow), 0 1px var(--color-shadow), 1px 0 var(--color-shadow), 0 -1px var(--color-shadow);
+}
+
+@supports((text-stroke: 1px var(--color-shadow)) or (-webkit-text-stroke: 1px var(--color-shadow))) {
+  .label {
+    -webkit-text-stroke: 1px var(--color-shadow);
+    text-stroke: 1px var(--color-shadow);
+    text-shadow: none;
+  }
+} 
 
 .article-content {
   display: flex;
@@ -81,6 +114,7 @@
   font: 410 18px / 21px var(--font-main);
   padding: var(--article-gap);
   gap: var(--article-gap);
+  border-block-start: 2px solid currentColor;
 }
 
 .article-text {
@@ -91,7 +125,7 @@
   /* like=130x38 total=169x38 */
   align-self: flex-end;
   min-inline-size: 130px; /* ? */
-  font: 400 14px / 2.429 'Press Start 2P'; /* line-height: 90% in figma; */
+  font: 400 14px / 2.286 'Press Start 2P'; /* line-height: 90% in figma; */
   border: 2px solid currentColor;
 }
 
