@@ -17,7 +17,13 @@
   --color-main: #000;
   --color-background: #fff;
   --color-shadow: #fff;
-
+  --background-main:  repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+                      repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+                      linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+                      
   --font-title: 'Press Start 2P', monospace;
   --font-main: 'Inter-Variable', 'Inter', sans-serif;
+
+  --footer-button-size: clamp(19.125rem, 17.0591rem + 8.8146vw, 20.9375rem);
+  --disk-size: clamp(1.3125rem, 2.2487rem + -2.1277vw, 1.75rem);
 }
