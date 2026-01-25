@@ -1,15 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --header-inline-size: clamp(
-    19.75rem /**/,
+    19.75rem,
     -0.25rem + 100vw,
     43.75rem
-  ); /* 704, min=23.1875rem */
-  --header-block-size: clamp(
-    20.1875rem,
-    16.9818rem + 13.6778vw,
-    23rem
   ); /* 704 */
+  --header-padding: clamp(7.5rem, 6.7876rem + 3.0395vw, 8.125rem); /* 704 */
 
   --font-size-logo: clamp(
     2.875rem,
@@ -21,7 +17,7 @@
     0.2339rem + 2.7356vw,
     1.4375rem
   ); /* 704 */
-
+  
   --header-top: clamp(6.25rem, 6.5175rem + -0.6079vw, 6.375rem); /* 704 */
   --header-bottom: clamp(6.125rem, 6.66rem + -1.2158vw, 6.375rem); /* 704 */
 
@@ -51,8 +47,8 @@
     ),
     linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
 
-  --font-title: "Press Start 2P", monospace;
-  --font-main: "Inter-Variable", "Inter", sans-serif;
+  --font-title: 'Press Start 2P', monospace;
+  --font-main: 'Inter-Variable', 'Inter', sans-serif;
 
   --footer-button-size: clamp(19.125rem, 17.0591rem + 8.8146vw, 20.9375rem);
   --disk-size: clamp(1.3125rem, 2.2487rem + -2.1277vw, 1.75rem);

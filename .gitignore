@@ -1,0 +1,8 @@
+/figma
+/node_modules
+npm init prettier stylelint.sh
+package.json
+package-lock.json
+.editorconfig
+.prettierrc
+stylelint.config.js

@@ -16,25 +16,21 @@
   max-inline-size: 700px;
   color: var(--color-main);
   font-variation-settings:
-    "wght" 400,
-    "slnt" 0;
+    'wght' 410,
+    'slnt' 0;
   background-image: var(--background-main);
+  background-attachment: fixed;
 }
 
-article,
-button {
+.header,
+.article,
+.button {
   background-color: var(--color-background);
 }
 
 .header {
   max-inline-size: var(--header-inline-size);
-  min-block-size: var(--header-block-size);
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--color-background);
+  padding-block: var(--header-padding);
   margin: var(--header-top) auto var(--header-bottom);
   outline: 2px solid currentColor;
 }
@@ -74,8 +70,11 @@ button {
 }
 
 .article-title {
-  font: 715 18px / 22px var(--font-main); /* line-height: 100% in figma; */
-  padding: 5px 10px 3px;
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-variation-settings: 'wght' 715;
+  line-height: 1.375rem;
+  padding: 4px 10px;
   border-block-end: 2px solid currentColor;
 }
 
@@ -119,7 +118,9 @@ button {
 .article-content {
   display: flex;
   flex-direction: column;
-  font: 410 18px / 21px var(--font-main);
+  font-family: var(--font-main);
+  font-size: 18px;
+  /* font-variation-settings: 'wght' 410; removed in .page */
   padding: var(--article-gap);
   gap: var(--article-gap);
   border-block-start: 2px solid currentColor;
@@ -144,7 +145,7 @@ button {
 }
 
 .button::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   inline-size: 100%;
@@ -162,6 +163,9 @@ button {
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--color-accent);
   transition: box-shadow 0.3s ease;
 }
@@ -227,8 +231,7 @@ button {
 }
 
 .dialog-disk[open]::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: sepia(100%) blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .dialog-disk .floppy {
@@ -254,35 +257,37 @@ button {
   line-height: 32px;
 }
 
-.stages .article:nth-child(1) img {
+/* image stylization */
+
+.red-blur {
   filter: blur(3px);
 }
 
-.stages .article:nth-child(2) img {
+.red2-brightness {
   filter: brightness(70%);
 }
 
-.stages .article:nth-child(3) img {
+.White-contrast {
   filter: contrast(250%);
 }
 
-.stages .article:nth-child(4) img {
+.red_white-grayscale {
   filter: grayscale(80%);
 }
 
-.stages .article:nth-child(5) img {
+.red-hue-rotate {
   filter: hue-rotate(0.5turn);
 }
 
-.stages .article:nth-child(6) img {
+.red2-opacity {
   filter: opacity(40%);
 }
 
-.stages .article:nth-child(7) img {
+.White-contrast-invert {
   filter: contrast(250%) invert(100%);
 }
 
-.stages .article:nth-child(8) img {
+.red_white-sepia {
   filter: sepia(100%);
 }
 
@@ -310,7 +315,7 @@ button {
 
 .like-icon:hover .core {
   fill: var(--color-contour);
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .like-icon:hover .main-body {
@@ -320,7 +325,7 @@ button {
 
 .like-icon:active .core {
   fill: var(--animation-fill-color);
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .like-icon:active .main-body {
@@ -330,7 +335,7 @@ button {
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .like-icon.is-liked .main-body {
@@ -346,4 +351,8 @@ button {
 
 .like-icon.is-liked .sparks {
   animation: flick-sparks 0.3s 0.3s linear;
+}
+
+.like-icon.is-liked {
+  animation: heart-scale 0.3s 0.06s linear;
 }
