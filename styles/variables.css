@@ -17,6 +17,7 @@
   --color-main: #000;
   --color-background: #fff;
   --color-shadow: #fff;
+  --color-accent: #000;
   --background-main:  repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
                       repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
                       linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
@@ -26,4 +27,11 @@
 
   --footer-button-size: clamp(19.125rem, 17.0591rem + 8.8146vw, 20.9375rem);
   --disk-size: clamp(1.3125rem, 2.2487rem + -2.1277vw, 1.75rem);
+
+  --dialog-size: clamp(20rem, 20.4576rem + 3.6474vw, 22.0625rem);
+  --dialog-inline-padding: clamp(1.875rem, 3.2124rem + -3.0395vw, 2.5rem);
+
+/* SVG */
+  --color-contour: #000;
+  --animation-fill-color: #f00;
 }
