@@ -264,11 +264,11 @@
   filter: blur(3px);
 }
 
-.red2-brightness {
+.red-brightness {
   filter: brightness(70%);
 }
 
-.White-contrast {
+.white-contrast {
   filter: contrast(250%);
 }
 
@@ -280,11 +280,11 @@
   filter: hue-rotate(0.5turn);
 }
 
-.red2-opacity {
+.red-opacity {
   filter: opacity(40%);
 }
 
-.White-contrast-invert {
+.white-contrast-invert {
   filter: contrast(250%) invert(100%);
 }
 
@@ -292,7 +292,11 @@
   filter: sepia(100%);
 }
 
-/* animation oh heart .like-icon {} */
+/* animation oh heart */
+
+.like-icon {
+  transform-origin: center;
+}
 
 .contour {
   fill: var(--color-contour);
@@ -351,9 +355,9 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: flick-sparks 0.3s 0.3s linear;
+  animation: flick-sparks 0.3s 0.3s ease-in;
 }
 
 .like-icon.is-liked {
-  animation: heart-scale 0.3s 0.06s linear;
+  animation: heart-scale 0.1s 0.3s ease-in;
 }
