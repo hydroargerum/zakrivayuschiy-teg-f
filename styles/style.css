@@ -14,7 +14,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   max-inline-size: 700px;
-  background-color: gray; /* for test */
   color: var(--color-main);
   font-variation-settings:
     "wght" 400,
@@ -211,6 +210,10 @@ button {
   block-size: var(--disk-size);
 }
 
+.button-save span {
+  align-self: center;
+}
+
 .dialog-disk[open] {
   position: fixed;
   inset: 0;
@@ -221,7 +224,6 @@ button {
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: 30px 20px;
-  /*  background-color: transparent; /* for test */
 }
 
 .dialog-disk[open]::backdrop {
@@ -247,9 +249,8 @@ button {
 
 .dialog-disk button {
   font-family: var(--font-title);
-  width: 100%;
+  inline-size: 100%;
   text-transform: uppercase;
-  /*  background-color: transparent; /* for test */
   line-height: 32px;
 }
 
