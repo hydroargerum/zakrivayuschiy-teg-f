@@ -16,7 +16,9 @@
   max-inline-size: 700px;
   background-color: gray; /* for test */
   color: var(--color-main);
-  font-variation-settings: "wght" 400, "slnt" 0;
+  font-variation-settings:
+    "wght" 400,
+    "slnt" 0;
   background-image: var(--background-main);
 }
 
@@ -65,7 +67,7 @@ button {
   flex-direction: column;
   gap: var(--section-gap);
 }
-  
+
 .article {
   display: flex;
   flex-direction: column;
@@ -97,16 +99,23 @@ button {
   background-color: transparent;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--color-shadow), 0 1px var(--color-shadow), 1px 0 var(--color-shadow), 0 -1px var(--color-shadow);
+  text-shadow:
+    -1px 0 var(--color-shadow),
+    0 1px var(--color-shadow),
+    1px 0 var(--color-shadow),
+    0 -1px var(--color-shadow);
 }
 
-@supports((text-stroke: 1px var(--color-shadow)) or (-webkit-text-stroke: 1px var(--color-shadow))) {
+@supports (
+  (text-stroke: 1px var(--color-shadow)) or
+    (-webkit-text-stroke: 1px var(--color-shadow))
+) {
   .label {
     -webkit-text-stroke: 1px var(--color-shadow);
     text-stroke: 1px var(--color-shadow);
     text-shadow: none;
   }
-} 
+}
 
 .article-content {
   display: flex;
@@ -136,7 +145,7 @@ button {
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   inline-size: 100%;
@@ -212,7 +221,7 @@ button {
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: 30px 20px;
-/*  background-color: transparent; /* for test */
+  /*  background-color: transparent; /* for test */
 }
 
 .dialog-disk[open]::backdrop {
@@ -240,7 +249,7 @@ button {
   font-family: var(--font-title);
   width: 100%;
   text-transform: uppercase;
-/*  background-color: transparent; /* for test */
+  /*  background-color: transparent; /* for test */
   line-height: 32px;
 }
 
@@ -276,10 +285,7 @@ button {
   filter: sepia(100%);
 }
 
-/* animation oh heart */
-.like-icon {
-
-}
+/* animation oh heart .like-icon {} */
 
 .contour {
   fill: var(--color-contour);
