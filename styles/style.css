@@ -359,5 +359,5 @@
 }
 
 .like-icon.is-liked {
-  animation: heart-scale 0.1s 0.3s ease-in;
+  animation: heart-scale 0.3s 0.1s ease-in;
 }
